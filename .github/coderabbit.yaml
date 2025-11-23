@@ -1,0 +1,25 @@
+language: ko
+
+reviews:
+  auto_review_on:
+    - pull_request_opened
+    - pull_request_reopened
+    - pull_request_synchronize
+
+  instructions:
+    - '코드 스타일, 버그 가능성, 구조 개선 검토'
+    - 'React/Next/Express/Prisma 컨벤션 고려'
+    - '핵심 중심 리뷰'
+
+  path_filters:
+    exclude:
+      - 'node_modules/**'
+      - 'dist/**'
+      - 'build/**'
+
+  max_comments: 10
+  only_review_changed_files: true
+
+summaries:
+  enable: true
+  format: markdown
